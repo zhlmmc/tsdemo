@@ -1,38 +1,39 @@
 /**
- * 字符串处理工具函数集合
+ * Collection of string manipulation utility functions
  */
 
 export class StringUtils {
-    /**
-     * 反转字符串
-     */
-    static reverse(str: string): string {
-        if (!str) return '';
-        return str.split('').reverse().join('');
-    }
+  /**
+   * Reverse a string
+   */
+  static reverse(str: string): string {
+    if (!str) return "";
+    return str.split("").reverse().join("");
+  }
 
-    /**
-     * 截取字符串，支持负数索引
-     */
-    static slice(str: string, start: number, end?: number): string {
-        if (!str) return '';
-        return str.slice(start, end);
-    }
+  /**
+   * Slice a string, supports negative indices
+   */
+  static slice(str: string, start: number, end?: number): string {
+    if (!str) return "";
+    return str.slice(start, end);
+  }
 
-    /**
-     * 检查字符串是否匹配指定模式
-     */
-    static matchPattern(str: string, pattern: RegExp): boolean {
-        if (!str || !pattern) return false;
-        return pattern.test(str);
-    }
+  /**
+   * Check if a string matches a specified pattern
+   */
+  static matchPattern(str: string, pattern: RegExp): boolean {
+    if (!str || !pattern) return false;
+    return pattern.test(str);
+  }
 
-    /**
-     * 将字符串转换为驼峰命名
-     */
-    static toCamelCase(str: string): string {
-        if (!str) return '';
-        return str.toLowerCase()
-            .replace(/[-_\s](.)/g, (_, char) => char.toUpperCase());
-    }
-} 
+  /**
+   * Convert a string to camel case
+   */
+  static toCamelCase(str: string): string {
+    if (!str) return "";
+    return str
+      .toLowerCase()
+      .replace(/[-_\s](.)/g, (_, char) => char.toUpperCase());
+  }
+}
